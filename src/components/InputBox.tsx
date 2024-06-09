@@ -19,6 +19,7 @@ const InputBox = (props: PROPS) => {
 			placeholder="差分比較したいテキストを入力してください"
 			width="70%"
 			height="100%"
+			resize="none"
 		/>
 	);
 };
