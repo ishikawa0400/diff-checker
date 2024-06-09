@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Box, Card, CardHeader, CardBody, Heading } from "@chakra-ui/react";
+import { Card, CardHeader, CardBody, Heading } from "@chakra-ui/react";
 import parse from "html-react-parser";
 
 interface PROPS {
@@ -10,14 +9,14 @@ const ResultBox = (props: PROPS) => {
 	const { diffResult } = props;
 
 	return (
-		<Box>
-			<Card display="inline-block" mb={4} w={600} h={400}>
-				<CardHeader>
-					<Heading size="md">差分結果</Heading>
-				</CardHeader>
-				<CardBody>{parse(diffResult)}</CardBody>
-			</Card>
-		</Box>
+		<Card display="inline-block" w="80%" h="55%">
+			<CardHeader h="10%">
+				<Heading size="md">Result</Heading>
+			</CardHeader>
+			<CardBody display="inline-block" overflow="auto" fontSize="lg" w="90%" h="85%">
+				{parse(diffResult)}
+			</CardBody>
+		</Card>
 	);
 };
 

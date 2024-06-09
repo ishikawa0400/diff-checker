@@ -1,7 +1,5 @@
-import React, { useState } from "react";
-import logo from "../logo.svg";
-import { Text, Textarea } from "@chakra-ui/react";
-import parse from "html-react-parser";
+import React from "react";
+import { Textarea } from "@chakra-ui/react";
 
 interface PROPS {
 	returnInput: React.Dispatch<React.SetStateAction<string>>;
@@ -15,14 +13,13 @@ const InputBox = (props: PROPS) => {
 		returnInput(inputValue);
 	};
 	return (
-		<div className="InputBox">
-			<Textarea
-				onChange={handleInputChange}
-				placeholder="差分比較したいテキストを入力してください"
-				width="70%"
-				height={200}
-			/>
-		</div>
+		<Textarea
+			bg="gray.50"
+			onChange={handleInputChange}
+			placeholder="差分比較したいテキストを入力してください"
+			width="70%"
+			height="100%"
+		/>
 	);
 };
 
